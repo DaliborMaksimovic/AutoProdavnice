@@ -24,7 +24,7 @@ document.getElementById("show-cars-btn").addEventListener("click", function () {
   document.getElementById("cars-list").style.background = "#e0ffe0";
 });
 
-// Forma
+
 const form = document.getElementById("quick-form");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -37,9 +37,9 @@ form.addEventListener("submit", function (e) {
 
 function kreirajPoruku(ime, auto) {
   if (!ime) return "Unesite ime!";
-  // String metoda: toUpperCase
+
   let imeVeliko = ime.toUpperCase();
-  // Niz metoda: findIndex
+  
   let idx = cars.findIndex((c) => c.name === auto);
   return `Hvala, ${imeVeliko}! Rezervisali ste ${auto} (pozicija: ${idx + 1}).`;
 }
