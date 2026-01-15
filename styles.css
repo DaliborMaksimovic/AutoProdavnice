@@ -67,7 +67,7 @@ body {
   justify-content: space-between;
 }
 
-.nav {
+nav {
   display: flex;
   padding: 30px;
   background-color: rgb(255, 161, 73);
@@ -76,7 +76,7 @@ body {
   align-items: center;
 }
 
-.nav-links {
+nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
@@ -283,5 +283,6 @@ textarea {
   text-align: center;
   margin-top: 50px;
 }
+
 
 
