@@ -9,7 +9,7 @@
   <body>
     <nav>
       <ul>
-        <li><a href="../index.html">Pocetna</a></li>
+        <li><a href="../index.html">Početna</a></li>
         <li><a href="onama.html">O Nama</a></li>
         <li><a href="auta.html">Auta</a></li>
         <li><a href="galerija.html">Galerija</a></li>
@@ -17,34 +17,34 @@
       </ul>
     </nav>
 
-    <h1>Kontakt</h1>
+    <div class="content kontakt-content">
+      <h1>Kontakt</h1>
+      <h2>Ako ste zainteresovani za naše usluge kontaktirajte nas</h2>
 
-    <h2>Ako ste zainteresovani za naše usluge kontaktirajte nas</h2>
-    <form action="https://submit-form.com/XNe3VjHsE">
-      <p>Ime:</p>
-      <input type="text" name="ime" />
+      <form action="https://submit-form.com/XNe3VjHsE">
+        <p>Ime:</p>
+        <input type="text" name="ime" required />
 
-      <p>Prezime:</p>
-      <input type="text" name="prezime" />
+        <p>Prezime:</p>
+        <input type="text" name="prezime" required />
 
-      <p>Usluga:</p>
-      <p>Kupovina Auta</p>
-      <input type="radio" name="usluga" />
-      <p>Servis Auta</p>
-      <input type="radio" name="usluga" />
+        <p>Usluga:</p>
+        <label><input type="radio" name="usluga" value="Kupovina Auta" required /> Kupovina Auta</label>
+        <label><input type="radio" name="usluga" value="Servis Auta" /> Servis Auta</label>
 
-      <p>E-mail:</p>
-      <input type="email" name="email" />
+        <p>E-mail:</p>
+        <input type="email" name="email" required />
 
-      <p>Vaša poruka:</p>
-      <textarea name="poruka" cols="35" rows="15"></textarea>
+        <p>Vaša poruka:</p>
+        <textarea name="poruka" cols="35" rows="15" required></textarea>
 
-      <br /><br />
-      <input type="submit" value="Pošalji poruku" />
-    </form>
+        <br />
+        <input type="submit" value="Pošalji poruku" />
+      </form>
+    </div>
 
     <footer>
-      <p>&copy; Dalibor Maksimovic.</p>
+      <p>&copy; Dalibor Maksimovic</p>
     </footer>
   </body>
 </html>
