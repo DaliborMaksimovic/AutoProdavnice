@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('show-cars-btn');
   const carsListDiv = document.getElementById('cars-list');
 
-  btn.addEventListener('click', () => {
-    if (carsListDiv.innerHTML.trim() !== '') return;
+  if (btn) {
+    btn.addEventListener('click', () => {
+      if (carsListDiv.innerHTML.trim() !== '') return;
 
-    const ul = document.createElement('ul');
-    cars.forEach(car => {
-      const li = document.createElement('li');
-      li.textContent = car;
-      ul.appendChild(li);
-    });
+      const ul = document.createElement('ul');
+      cars.forEach(car => {
+        const li = document.createElement('li');
+        li.textContent = car;
+        ul.appendChild(li);
+      });
 
-    carsListDiv.appendChild(ul);
-  });
-});
+      carsListDiv.appendChild(ul);
+   
