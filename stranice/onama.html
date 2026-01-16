@@ -1,41 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles.css" />
-    <title>Car Hub - O nama</title>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Pocetna</a></li>
-        <li><a href="onama.html">O Nama</a></li>
-        <li><a href="auta.html">Auta</a></li>
-        <li><a href="galerija.html">Galerija</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O Nama</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffa149;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+    p {
+      max-width: 600px;
+      line-height: 1.5;
+      color: #555;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Početna</a></li>
+      <li><a href="onama.html">O Nama</a></li>
+      <li><a href="auta.html">Auta</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
 
-    <main>
-      <h3>Istražite našu kolekciju automobila</h3>
-      <p>
-        Dobrodošli na Auto Prodavnice, gde možete pronaći širok spektar
-        automobila koji odgovaraju vašim potrebama i preferencijama.
-      </p>
-      <p>
-        Bilo da tražite sportski automobil ili pouzdan porodični automobil,
-        imamo nešto za svakoga.
-      </p>
+  <h1>O nama</h1>
 
-      <div class="info">
-        <img src="../slike/auto1.jpg" alt="Auto 1" width="500" height="500" />
-        <div class="info-text"></div>
-      </div>
-    </main>
+  <div>
+    <h3>Istražite našu kolekciju automobila</h3>
+    <p>
+      Dobrodošli na Auto Prodavnice, gde možete pronaći širok spektar automobila koji odgovaraju vašim potrebama i preferencijama.
+    </p>
+    <p>
+      Bilo da tražite sportski automobil ili pouzdan porodični automobil, imamo nešto za svakoga.
+    </p>
+  </div>
 
-    <footer>
-      <p>&copy; Dalibor Maksimovic.</p>
-    </footer>
-  </body>
+  <img src="../slike/auto1.jpg" alt="Auto slika" width="500" height="500" />
+
+  <footer>
+    &copy; Dalibor Maksimovic.
+  </footer>
+</body>
 </html>
