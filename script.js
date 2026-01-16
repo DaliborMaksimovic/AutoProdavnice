@@ -3,17 +3,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('show-cars-btn');
   const carsListDiv = document.getElementById('cars-list');
 
-  btn.addEventListener('click', () => {
-    // Ako lista je već prikazana, ne prikazuj opet
-    if (carsListDiv.innerHTML.trim() !== '') return;
+  if (btn) {
+    btn.addEventListener('click', () => {
+      if (carsListDiv.innerHTML.trim() !== '') return;
 
-    const ul = document.createElement('ul');
-    cars.forEach(car => {
-      const li = document.createElement('li');
-      li.textContent = car;
-      ul.appendChild(li);
+      const ul = document.createElement('ul');
+      cars.forEach(car => {
+        const li = document.createElement('li');
+        li.textContent = car;
+        ul.appendChild(li);
+      });
+
+      carsListDiv.appendChild(ul);
     });
+  }
 
-    carsListDiv.appendChild(ul);
-  });
+  const form = document.getElementById('quick-form');
+  const formResult = document.getElementById('form-result');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const ime = form.elements['ime'].value.trim();
+      const auto = form.elements['auto'].value;
+
+      if (!ime) {
+        formResult.textContent = "Molimo unesite vaše ime.";
+        formResult.style.color = "red";
+        return;
+      }
+
+      formResult.textContent = `Vaš auto (${auto}) je uspešno rezervisan, ${ime}!`;
+      formResult.style.color = "green";
+
+      form.reset();
+    });
+  }
 });
