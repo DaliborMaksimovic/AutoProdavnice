@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Dodajemo i kontakt formu
+  
   const contactForm = document.querySelector('form[action="https://submit-form.com/XNe3VjHsE"]');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
