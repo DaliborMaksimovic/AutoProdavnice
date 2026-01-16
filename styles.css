@@ -1,262 +1,135 @@
-/* General reset */
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-  padding: 0;
-  background: #fff;
-  color: #333;
-}
-
-/* Navigacioni meni - narandžasta kocka preko cele širine */
 nav {
   width: 100%;
   background-color: rgb(255, 161, 73);
   padding: 20px 0;
-  box-sizing: border-box;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
-  max-width: 1100px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding: 0;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
   color: black;
   text-decoration: none;
-  font-size: 20px;
-  padding: 8px 15px;
-  border-radius: 6px;
-  transition: background-color 0.3s, color 0.3s;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  background-color: rgba(0,0,0,0.1);
+nav ul li a:hover {
   color: rgb(59, 59, 59);
 }
 
-/* Centriranje i stil za naslov na početnoj */
-h1 {
+h1, h2, h3 {
+  background: none !important;
+  padding: 0 !important;
+  margin: 20px 0;
   text-align: center;
-  background-color: rgb(255, 161, 73);
-  color: black;
+}
+
+body, html {
+  height: 100%;
   margin: 0;
-  padding: 20px 0;
-  font-size: 2.8rem;
-  font-weight: 700;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Sadržaj svih stranica - centriran */
-.content {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
+main {
+  flex: 1 0 auto;
 }
 
-/* Specifični stilovi za O nama, Auta, Galerija, Kontakt */
-.onama-content h1,
-.onama-content h3,
-.onama-content p,
-.onama-content img,
-.auta-content h1,
-.auta-content table,
-.galerija-content h1,
-.galerija-content h2,
-.galerija-content .gallery,
-.kontakt-content h1,
-.kontakt-content h2,
-.kontakt-content form {
-  margin-bottom: 20px;
-}
-
-/* Slika u O nama sa okvirima i veličinom */
-.onama-content img {
-  max-width: 500px;
-  width: 100%;
-  border: 5px solid rgb(255, 161, 73);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Tabela u auta.html - veća i centrirana */
-.auta-content table {
-  width: 90%;
-  margin: 0 auto 40px auto;
-  border-collapse: collapse;
-  font-size: 20px;
-  text-align: center;
-}
-
-.auta-content table th,
-.auta-content table td {
-  border: 1px solid rgb(200, 200, 200);
-  padding: 15px 20px;
-}
-
-.auta-content table th {
+footer {
+  flex-shrink: 0;
   background-color: rgb(255, 161, 73);
   color: white;
-  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
 }
 
-/* Galerija slike stilovi */
-.galerija-content .gallery img {
+main, .content, .auto-info, .gallery, form {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.content p, .auto-info ol, form p {
+  font-size: 1.2rem;
+  color: rgb(80, 80, 80);
+}
+
+main img {
+  display: block;
+  margin: 20px auto;
+  border: 4px solid rgb(255, 161, 73);
+  border-radius: 10px;
+}
+
+table {
+  width: 100% !important;
+  max-width: 900px;
+  margin: 20px auto !important;
+  font-size: 1rem;
+  border-collapse: collapse;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  border: 3px solid rgb(255, 161, 73);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
   width: 250px;
   height: 250px;
-  margin: 10px;
-  border: 2px solid rgb(255, 161, 73);
-  border-radius: 10px;
-  transition: transform 0.3s;
+  object-fit: cover;
 }
 
-.galerija-content .gallery img:hover {
+.gallery img:hover {
   transform: scale(1.1);
 }
 
-/* Footer fiksiran na dno stranice i centriran */
-footer {
-  background-color: rgb(255, 161, 73);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin-top: 40px;
-}
-
-/* Kontakt forma centrirana i sa prostorom */
-.kontakt-content form {
-  max-width: 600px;
-  margin: 0 auto 40px auto;
+form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-.kontakt-content form p,
-.kontakt-content form label {
-  font-size: 18px;
-  color: rgb(95, 95, 95);
-  margin-bottom: 5px;
-}
-
-.kontakt-content form input[type="text"],
-.kontakt-content form input[type="email"],
-.kontakt-content form textarea {
-  width: 100%;
+form input, form textarea {
   padding: 10px;
-  border: 1px solid rgb(200, 200, 200);
+  font-size: 1rem;
   border-radius: 5px;
-  font-size: 16px;
+  border: 1px solid rgb(200, 200, 200);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.kontakt-content form input[type="radio"] {
-  margin-right: 8px;
-  cursor: pointer;
-}
-
-.kontakt-content form input[type="submit"] {
+form input[type="submit"] {
   background-color: rgb(255, 161, 73);
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 18px;
-  padding: 10px 0;
-  border-radius: 6px;
-  transition: background-color 0.3s;
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.kontakt-content form input[type="submit"]:hover {
+form input[type="submit"]:hover {
   background-color: rgb(220, 140, 63);
-}
-
-/* Opšti stil za tabele, dugmad i forme koje si imao */
-
-#js-section {
-  margin: 30px auto;
-  padding: 15px;
-  background: #f7f7f7;
-  border-radius: 8px;
-  max-width: 500px;
-  text-align: center;
-}
-
-#show-cars-btn {
-  padding: 8px 18px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-#show-cars-btn:hover {
-  background: #0056b3;
-}
-
-#cars-list ul {
-  margin-top: 12px;
-  padding-left: 20px;
-  text-align: left;
-  display: inline-block;
-}
-
-#form-section {
-  margin: 30px auto;
-  padding: 15px;
-  background: #f0f8ff;
-  border-radius: 8px;
-  max-width: 500px;
-}
-
-#form-section label {
-  display: block;
-  margin-top: 10px;
-}
-
-#form-section input[type="text"],
-#form-section select {
-  width: 90%;
-  padding: 6px;
-  margin-top: 4px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-#form-section input[type="submit"] {
-  margin-top: 12px;
-  padding: 8px 18px;
-  background: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-#form-section input[type="submit"]:hover {
-  background: #1e7e34;
-}
-
-#form-result {
-  margin-top: 15px;
-  font-weight: bold;
-  min-height: 24px;
 }
