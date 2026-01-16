@@ -19,12 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const form = document.getElementById('quick-form');
-
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       alert('Vaše vozilo je uspješno rezervisano!');
       form.reset();
+    });
+  }
+
+  // Dodajemo i kontakt formu
+  const contactForm = document.querySelector('form[action="https://submit-form.com/XNe3VjHsE"]');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Vaša poruka je uspešno poslata!');
+      contactForm.reset();
     });
   }
 });
