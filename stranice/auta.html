@@ -1,75 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles.css" />
-    <title>Car Hub - Auta</title>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Pocetna</a></li>
-        <li><a href="onama.html">O Nama</a></li>
-        <li><a href="auta.html">Auta</a></li>
-        <li><a href="galerija.html">Galerija</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Auta</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffa149;
+    }
+    h1, h3 {
+      margin-bottom: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      color: #555;
+    }
+    table th {
+      background-color: #ffa149;
+      color: white;
+      text-transform: uppercase;
+    }
+    table tr:nth-child(even) {
+      background-color: #f7f7f7;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Početna</a></li>
+      <li><a href="onama.html">O Nama</a></li>
+      <li><a href="auta.html">Auta</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
 
-    <main>
-      <h3>Šta nudimo</h3>
-      <hr />
-      <ol>
-        <li>Usluga</li>
-        <li>Prodaja automobila</li>
-        <li>Iznajmljivanje automobila</li>
-        <li>Održavanje i popravka automobila</li>
-        <li>Usluge prilagođavanja</li>
-      </ol>
-      <hr />
+  <h1>Websajt za auta</h1>
 
-      <img src="../slike/auto2.jpg" alt="Auto 2" width="300" height="300" />
+  <div>
+    <h3>Šta nudimo</h3>
+    <hr />
+    <ol style="max-width: 600px; margin: 0 auto; text-align: left;">
+      <li>Usluga</li>
+      <li>Prodaja automobila</li>
+      <li>Iznajmljivanje automobila</li>
+      <li>Održavanje i popravka automobila</li>
+      <li>Usluge prilagođavanja</li>
+    </ol>
+  </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>***</th>
-            <th>Ime</th>
-            <th>Model</th>
-            <th>Max Brzina</th>
-            <th>Cena</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Car 1</td>
-            <td>Model 1</td>
-            <td>200 km/h</td>
-            <td>$20,000</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Car 2</td>
-            <td>Model 2</td>
-            <td>220 km/h</td>
-            <td>$25,000</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Car 3</td>
-            <td>Model 3</td>
-            <td>250 km/h</td>
-            <td>$30,000</td>
-          </tr>
-        </tbody>
-      </table>
+  <hr style="width: 80%; margin: 30px auto;" />
 
-    </main>
+  <img src="../slike/auto2.jpg" alt="Auto slika" width="300" height="300" style="border-radius: 8px; margin-bottom: 30px;" />
 
-    <footer>
-      <p>&copy; Dalibor Maksimovic.</p>
-    </footer>
-  </body>
+  <table>
+    <thead>
+      <tr>
+        <th>***</th>
+        <th>Ime</th>
+        <th>Model</th>
+        <th>Max Brzina</th>
+        <th>Cena</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Car 1</td>
+        <td>Model 1</td>
+        <td>200 km/h</td>
+        <td>$20,000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Car 2</td>
+        <td>Model 2</td>
+        <td>220 km/h</td>
+        <td>$25,000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Car 3</td>
+        <td>Model 3</td>
+        <td>250 km/h</td>
+        <td>$30,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    &copy; Dalibor Maksimovic.
+  </footer>
+</body>
 </html>
