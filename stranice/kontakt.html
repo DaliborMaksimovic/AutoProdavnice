@@ -20,24 +20,22 @@
     <main>
       <h1>Kontakt</h1>
       <h2>Ako ste zainteresovani za naše usluge kontaktirajte nas</h2>
-      <form action="https://submit-form.com/XNe3VjHsE">
+      <form id="contact-form">
         <p>Ime:</p>
-        <input type="text" name="ime" />
+        <input type="text" name="ime" required />
 
         <p>Prezime:</p>
-        <input type="text" name="prezime" />
+        <input type="text" name="prezime" required />
 
         <p>Usluga:</p>
-        <p>Kupovina Auta</p>
-        <input type="radio" name="usluga" />
-        <p>Servis Auta</p>
-        <input type="radio" name="usluga" />
+        <label><input type="radio" name="usluga" value="Kupovina Auta" required /> Kupovina Auta</label><br />
+        <label><input type="radio" name="usluga" value="Servis Auta" /> Servis Auta</label>
 
         <p>E-mail:</p>
-        <input type="email" name="email" />
+        <input type="email" name="email" required />
 
         <p>Vaša poruka:</p>
-        <textarea name="poruka" cols="35" rows="15"></textarea>
+        <textarea name="poruka" cols="35" rows="7" required></textarea>
 
         <br /><br />
         <input type="submit" value="Pošalji poruku" />
@@ -47,5 +45,16 @@
     <footer>
       <p>&copy; Dalibor Maksimovic.</p>
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Vaša poruka je uspešno poslata!');
+          form.reset();
+        });
+      });
+    </script>
   </body>
 </html>
