@@ -1,24 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('quick-form');
-  const formResult = document.getElementById('form-result');
+  const cars = ['Car 1', 'Car 2', 'Car 3'];
+  const btn = document.getElementById('show-cars-btn');
+  const carsListDiv = document.getElementById('cars-list');
 
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+  btn.addEventListener('click', () => {
+    
+    if (carsListDiv.innerHTML.trim() !== '') return;
 
-      const ime = form.elements['ime'].value.trim();
-      const auto = form.elements['auto'].value;
-
-      if (!ime) {
-        formResult.textContent = "Molimo unesite vaše ime.";
-        formResult.style.color = "red";
-        return;
-      }
-
-      formResult.textContent = `Vaš auto (${auto}) je uspešno rezervisan, ${ime}!`;
-      formResult.style.color = "green";
-
-      form.reset();
+    const ul = document.createElement('ul');
+    cars.forEach(car => {
+      const li = document.createElement('li');
+      li.textContent = car;
+      ul.appendChild(li);
     });
-  }
+
+    carsListDiv.appendChild(ul);
+  });
 });
