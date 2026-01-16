@@ -16,3 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       carsListDiv.appendChild(ul);
    
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form'); 
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); 
+
+      
+
+      alert('Vaše vozilo je uspješno rezervisano!');
+      form.reset(); 
+    });
+  }
+});
