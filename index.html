@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
-  <title>Car Hub</title>
-</head>
-<body>
-  <h1>Auto Prodavnice</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Car Hub</title>
+  </head>
+  <body>
+    <h1>Auto Prodavnice</h1>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Pocetna</a></li>
-      <li><a href="./stranice/onama.html">O Nama</a></li>
-      <li><a href="./stranice/auta.html">Auta</a></li>
-      <li><a href="./stranice/galerija.html">Galerija</a></li>
-      <li><a href="./stranice/kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="index.html">Pocetna</a></li>
+        <li><a href="./stranice/onama.html">O Nama</a></li>
+        <li><a href="./stranice/auta.html">Auta</a></li>
+        <li><a href="./stranice/galerija.html">Galerija</a></li>
+        <li><a href="./stranice/kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
 
-  <div>
-    <h2>Dobrodošli na Auto Prodavnice</h2>
-    <p>Naša prodavnica nudi širok spektar automobila који odgovaraju vašim potrebama i preferencijama.</p>
-    <p>Od sportskih automobila do pouzdanih porodičnih vozila, imamo nešto za svakoga.</p>
-  </div>
+    <div class="content">
+      <h2>Dobrodošli na Auto Prodavnice</h2>
+      <p>
+        Naša prodavnica nudi širok spektar automobila koji odgovaraju vašim
+        potrebama i preferencijama.
+      </p>
+      <p>
+        Od sportskih automobila do pouzdanih porodičnih vozila, imamo nešto za
+        svakoga.
+      </p>
+    </div>
 
-  <div id="js-section">
-    <button id="show-cars-btn">Prikaži automobile</button>
-    <div id="cars-list"></div>
-  </div>
+    <div id="js-section">
+      <button id="show-cars-btn">Prikaži automobile</button>
+      <div id="cars-list"></div>
+    </div>
 
-  <div id="form-section">
-    <h3>Brza rezervacija</h3>
-    <form id="quick-form">
-      <label for="ime">Ime:</label>
-      <input type="text" id="ime" name="ime" required />
+    <div id="form-section">
+      <h3>Brza rezervacija</h3>
+      <form id="quick-form">
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" name="ime" required />
+        <label for="auto">Izaberi auto:</label>
+        <select id="auto" name="auto">
+          <option value="Car 1">Car 1</option>
+          <option value="Car 2">Car 2</option>
+          <option value="Car 3">Car 3</option>
+        </select>
+        <input type="submit" value="Rezerviši" />
+      </form>
+      <div id="form-result"></div>
+    </div>
 
-      <label for="auto">Izaberi auto:</label>
-      <select id="auto" name="auto">
-        <option value="Car 1">Car 1</option>
-        <option value="Car 2">Car 2</option>
-        <option value="Car 3">Car 3</option>
-      </select>
-
-      <input type="submit" value="Rezerviši" />
-    </form>
-    <div id="form-result"></div>
-  </div>
-
-  <footer>
-    <p>&copy; 2024 Dalibor Maksimovic</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2024 Dalibor Maksimovic</p>
+    </footer>
+  </body>
 </html>
