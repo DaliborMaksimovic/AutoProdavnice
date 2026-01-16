@@ -1,73 +1,11 @@
-
-
-body {
-  margin: 0;
-  font-family: sans-serif;
-  padding: 0;
-  background: white;
-}
-
-header {
-  background-color: rgb(255, 161, 73);
-  padding: 20px 0;
-  text-align: center;
-  color: black;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.8rem;
-}
-
-nav {
-  margin-top: 15px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li a {
-  color: black;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: rgb(59, 59, 59);
-}
-
-.content {
-  max-width: 700px;
-  margin: 40px auto 20px;
-  text-align: center;
-}
-
-.content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.content p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 12px 0;
-  line-height: 1.5;
-}
-
 #js-section {
-  margin: 30px auto;
+  margin: 30px 0;
   padding: 15px;
   background: #f7f7f7;
   border-radius: 8px;
   max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -93,11 +31,13 @@ nav ul li a:hover {
 }
 
 #form-section {
-  margin: 30px auto 50px;
+  margin: 30px 0;
   padding: 15px;
   background: #f0f8ff;
   border-radius: 8px;
   max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #form-section label {
@@ -135,11 +75,72 @@ nav ul li a:hover {
   min-height: 24px;
 }
 
+nav {
+  display: flex;
+  padding: 30px;
+  background-color: rgb(255, 161, 73);
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.2s color;
+}
+
+nav ul li a:hover {
+  color: rgb(59, 59, 59);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.content > h2 {
+  font-size: 40px;
+  margin: 20px;
+}
+
+.content p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px;
+}
+
 footer {
   background-color: rgb(255, 161, 73);
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   margin-top: 40px;
-  font-size: 1rem;
+}
+
+/* Stilovi galerije i ostalo... */
+.gallery img {
+  margin: 10px;
+  border: 2px solid rgb(255, 161, 73);
+  border-radius: 10px;
+  transition: transform 0.3s;
+  width: 250px;
+  height: 250px;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
 }
