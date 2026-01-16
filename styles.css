@@ -1,21 +1,32 @@
+
+
 body {
   margin: 0;
   font-family: sans-serif;
   padding: 0;
+  background: white;
+}
+
+header {
+  background-color: rgb(255, 161, 73);
+  padding: 20px 0;
+  text-align: center;
+  color: black;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
 }
 
 nav {
-  display: flex;
-  padding: 30px;
-  background-color: rgb(255, 161, 73);
-  color: black;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 15px;
 }
 
 nav ul {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -24,8 +35,9 @@ nav ul {
 nav ul li a {
   color: black;
   text-decoration: none;
-  font-size: 20px;
-  transition: 0.2s color;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -33,33 +45,29 @@ nav ul li a:hover {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
+  max-width: 700px;
+  margin: 40px auto 20px;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
 }
 
-.content > h2 {
-  font-size: 40px;
-  margin: 20px;
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .content p {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 500;
-  margin: 20px;
+  margin: 12px 0;
+  line-height: 1.5;
 }
 
 #js-section {
-  margin: 30px 0;
+  margin: 30px auto;
   padding: 15px;
   background: #f7f7f7;
   border-radius: 8px;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
@@ -85,13 +93,11 @@ nav ul li a:hover {
 }
 
 #form-section {
-  margin: 30px 0;
+  margin: 30px auto 50px;
   padding: 15px;
   background: #f0f8ff;
   border-radius: 8px;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #form-section label {
@@ -133,142 +139,7 @@ footer {
   background-color: rgb(255, 161, 73);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   margin-top: 40px;
-}
-
-.gallery {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.gallery h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: rgb(95, 95, 95);
-}
-
-.gallery img {
-  margin: 10px;
-  border: 2px solid rgb(255, 161, 73);
-  border-radius: 10px;
-  transition: transform 0.3s;
-  width: 250px;
-  height: 250px;
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-}
-
-.auto-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  gap: 40px;
-}
-
-.auto-info h3 {
-  font-size: 24px;
-  color: rgb(95, 95, 95);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.auto-info ol {
-  list-style: decimal;
-  padding-left: 20px;
-  color: rgb(95, 95, 95);
-  font-size: 18px;
-}
-
-table {
-  border-collapse: collapse;
-  width: 80%;
-  margin: 20px auto;
-  font-size: 18px;
-  text-align: left;
-}
-
-table th,
-table td {
-  border: 1px solid rgb(200, 200, 200);
-  padding: 12px 15px;
-}
-
-table th {
-  background-color: rgb(255, 161, 73);
-  color: white;
-  text-transform: uppercase;
-}
-
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-table tr:hover {
-  background-color: #f1f1f1;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin: 20px auto;
-  width: 80%;
-  max-width: 600px;
-}
-
-form p {
-  font-size: 18px;
-  color: rgb(95, 95, 95);
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid rgb(200, 200, 200);
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-form input[type="submit"] {
-  background-color: rgb(255, 161, 73);
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s;
-}
-
-form input[type="submit"]:hover {
-  background-color: rgb(220, 140, 63);
-}
-
-textarea {
-  resize: none;
-}
-
-.radio {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.radio label {
-  font-size: 13px;
-  color: rgb(95, 95, 95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.kontakt-text {
-  text-align: center;
-  margin-top: 50px;
+  font-size: 1rem;
 }
