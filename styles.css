@@ -1,11 +1,199 @@
+/* General reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+/* Navigacioni meni - narandžasta kocka preko cele širine */
+nav {
+  width: 100%;
+  background-color: rgb(255, 161, 73);
+  padding: 20px 0;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: rgba(0,0,0,0.1);
+  color: rgb(59, 59, 59);
+}
+
+/* Centriranje i stil za naslov na početnoj */
+h1 {
+  text-align: center;
+  background-color: rgb(255, 161, 73);
+  color: black;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+/* Sadržaj svih stranica - centriran */
+.content {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Specifični stilovi za O nama, Auta, Galerija, Kontakt */
+.onama-content h1,
+.onama-content h3,
+.onama-content p,
+.onama-content img,
+.auta-content h1,
+.auta-content table,
+.galerija-content h1,
+.galerija-content h2,
+.galerija-content .gallery,
+.kontakt-content h1,
+.kontakt-content h2,
+.kontakt-content form {
+  margin-bottom: 20px;
+}
+
+/* Slika u O nama sa okvirima i veličinom */
+.onama-content img {
+  max-width: 500px;
+  width: 100%;
+  border: 5px solid rgb(255, 161, 73);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Tabela u auta.html - veća i centrirana */
+.auta-content table {
+  width: 90%;
+  margin: 0 auto 40px auto;
+  border-collapse: collapse;
+  font-size: 20px;
+  text-align: center;
+}
+
+.auta-content table th,
+.auta-content table td {
+  border: 1px solid rgb(200, 200, 200);
+  padding: 15px 20px;
+}
+
+.auta-content table th {
+  background-color: rgb(255, 161, 73);
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Galerija slike stilovi */
+.galerija-content .gallery img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border: 2px solid rgb(255, 161, 73);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.galerija-content .gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer fiksiran na dno stranice i centriran */
+footer {
+  background-color: rgb(255, 161, 73);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* Kontakt forma centrirana i sa prostorom */
+.kontakt-content form {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.kontakt-content form p,
+.kontakt-content form label {
+  font-size: 18px;
+  color: rgb(95, 95, 95);
+  margin-bottom: 5px;
+}
+
+.kontakt-content form input[type="text"],
+.kontakt-content form input[type="email"],
+.kontakt-content form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.kontakt-content form input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.kontakt-content form input[type="submit"] {
+  background-color: rgb(255, 161, 73);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 0;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.kontakt-content form input[type="submit"]:hover {
+  background-color: rgb(220, 140, 63);
+}
+
+/* Opšti stil za tabele, dugmad i forme koje si imao */
+
 #js-section {
-  margin: 30px 0;
+  margin: 30px auto;
   padding: 15px;
   background: #f7f7f7;
   border-radius: 8px;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
@@ -31,13 +219,11 @@
 }
 
 #form-section {
-  margin: 30px 0;
+  margin: 30px auto;
   padding: 15px;
   background: #f0f8ff;
   border-radius: 8px;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #form-section label {
@@ -73,74 +259,4 @@
   margin-top: 15px;
   font-weight: bold;
   min-height: 24px;
-}
-
-nav {
-  display: flex;
-  padding: 30px;
-  background-color: rgb(255, 161, 73);
-  color: black;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li a {
-  color: black;
-  text-decoration: none;
-  font-size: 20px;
-  transition: 0.2s color;
-}
-
-nav ul li a:hover {
-  color: rgb(59, 59, 59);
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-}
-
-.content > h2 {
-  font-size: 40px;
-  margin: 20px;
-}
-
-.content p {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 20px;
-}
-
-footer {
-  background-color: rgb(255, 161, 73);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* Stilovi galerije i ostalo... */
-.gallery img {
-  margin: 10px;
-  border: 2px solid rgb(255, 161, 73);
-  border-radius: 10px;
-  transition: transform 0.3s;
-  width: 250px;
-  height: 250px;
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
 }
