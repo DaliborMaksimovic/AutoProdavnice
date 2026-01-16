@@ -133,3 +133,31 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
   background-color: rgb(220, 140, 63);
 }
+
+.btn-link {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid rgb(255, 161, 73);
+  border-radius: 6px;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  background-color: rgb(255, 161, 73);
+  color: white;
+}
+
+#form-section {
+  max-width: 450px;
+  margin: 40px auto 60px auto;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+
