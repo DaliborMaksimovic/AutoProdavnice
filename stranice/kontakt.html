@@ -4,49 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
-    <title>Kontakt</title>
+    <title>Car Hub - Kontakt</title>
   </head>
   <body>
-    <div>
-      <h1>Kontakt</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Pocetna</a></li>
+        <li><a href="onama.html">O Nama</a></li>
+        <li><a href="auta.html">Auta</a></li>
+        <li><a href="galerija.html">Galerija</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
 
-      <div>
-        <ul>
-          <li><a href="../index.html">Pocetna</a></li>
-          <li><a href="onama.html">O Nama</a></li>
-          <li><a href="auta.html">Auta</a></li>
-          <li><a href="galerija.html">Galerija</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </div>
-    </div>
+    <main>
+      <h2>Ako ste zainteresovani za naše usluge kontaktirajte nas</h2>
+      <form action="https://submit-form.com/XNe3VjHsE">
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" name="ime" required />
 
-    <h2>Ako ste zainteresovani za nase usluge kontaktirajte nas</h2>
-    <form action="https://submit-form.com/XNe3VjHsE">
-      <p>Ime:</p>
-      <input type="text" name="ime" />
+        <label for="prezime">Prezime:</label>
+        <input type="text" id="prezime" name="prezime" />
 
-      <p>Prezime:</p>
-      <input type="text" name="prezime" />
+        <p>Usluga:</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="usluga" value="kupovina" required />
+            Kupovina auta
+          </label>
+          <label>
+            <input type="radio" name="usluga" value="servis" />
+            Servis auta
+          </label>
+        </div>
 
-      <p>Usluga:</p>
-      <p>Kupovina Auta</p>
-      <input type="radio" name="usluga" />
-      <p>Servis Auta</p>
-      <input type="radio" name="usluga" />
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-      <p>E-mail:</p>
-      <input type="email" name="email" />
+        <label for="poruka">Vaša poruka:</label>
+        <textarea id="poruka" name="poruka" cols="35" rows="15"></textarea>
 
-      <p>Vasa poruka:</p>
-      <textarea name="poruka" cols="35" rows="15"></textarea>
+        <input type="submit" value="Pošalji poruku" />
+      </form>
+    </main>
 
-      <br /><br />
-      <input type="submit" value="Posalji poruku" />
-    </form>
-
-    <div>
+    <footer>
       <p>&copy; Dalibor Maksimovic.</p>
-    </div>
+    </footer>
   </body>
 </html>
